@@ -11,8 +11,9 @@ pipeline {
 
         stage('Docker') {
             steps {
-                sh 'docker run -it --rm -d -p 8080:80 --name web nginx'
 
+                sh 'docker run -it --rm -d -p 8180:80 --name web nginx'
+                sh 'sleep 60'
             }
         
 
