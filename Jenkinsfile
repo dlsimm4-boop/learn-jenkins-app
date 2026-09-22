@@ -11,8 +11,10 @@ pipeline {
 
         stage('Docker') {
             steps {
-               // sh 'docker stop web'
+                sh 'docker stop web'
+                sh 'docker rm web'
                 sh 'docker run -it --rm -d -p 8180:80 --name web nginx'
+                reuseNode true
                 sh 'sleep 60'
             }
         
