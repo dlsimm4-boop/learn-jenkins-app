@@ -11,8 +11,8 @@ pipeline {
 
         stage('Docker') {
             steps {
-                sh 'docker run -d -p 8080:80 --name hello-web nginx:alpine sh -c "echo '<h1>Hello World!</h1>' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"
-'
+                sh 'docker run -it --rm -d -p 8080:80 --name web nginx'
+
             }
         
 
