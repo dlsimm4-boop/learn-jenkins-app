@@ -27,7 +27,7 @@ pipeline {
             }
         }
 
-        //stage('Tests') {
+        stage('Tests') {
           //  parallel {
             //    stage('Unit tests') {
               //      agent {
@@ -48,7 +48,7 @@ pipeline {
                        //     junit 'jest-results/junit.xml'
                        // }
                   //  }
-               // }
+            }
                 
                 stage('E2E') {
                     agent {
