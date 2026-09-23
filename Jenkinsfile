@@ -9,7 +9,7 @@ pipeline {
 
     stages {
 
-        stage('Docker') {
+        stages('Docker') {
             agent {
           image 'nginx'
                 
