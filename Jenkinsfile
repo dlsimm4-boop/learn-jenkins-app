@@ -16,7 +16,7 @@ pipeline {
             image 'nginx'
                 
             }
-            }
+        }
         steps('BuildDocker'){
             '''
             sh echo "In BuildDocker"
