@@ -9,9 +9,10 @@ pipeline {
 
     stages {
 
-        stages('Docker') {
+        stage('Docker') {
             agent {
-          image 'nginx'
+          docker {
+            image 'nginx'
                 
             }
         steps('BuildDocker'){
