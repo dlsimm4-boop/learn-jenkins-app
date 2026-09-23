@@ -8,12 +8,14 @@ pipeline {
     }
 
     stages {
-
+       
         stage('Docker') {
             agent {
+          
           docker {
             image 'nginx'
                 
+            }
             }
         steps('BuildDocker'){
             '''
